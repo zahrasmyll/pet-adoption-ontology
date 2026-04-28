@@ -1,1 +1,66 @@
-<!-- Initial ontology placeholder -->
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/petadoption#"
+     xml:base="http://www.example.org/petadoption"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://www.example.org/petadoption"/>
+
+    <!-- CLASSES -->
+    <owl:Class rdf:about="#Pet"/>
+    <owl:Class rdf:about="#Dog">
+        <rdfs:subClassOf rdf:resource="#Pet"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Cat">
+        <rdfs:subClassOf rdf:resource="#Pet"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Person"/>
+    <owl:Class rdf:about="#Shelter"/>
+
+    <!-- OBJECT PROPERTIES -->
+    <owl:ObjectProperty rdf:about="#adopts">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Pet"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#livesIn">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="#Shelter"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#worksAt">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Shelter"/>
+    </owl:ObjectProperty>
+
+    <!-- DATA PROPERTIES -->
+    <owl:DatatypeProperty rdf:about="#petName">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#age">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#personName">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+
+    <!-- INSTANCES -->
+    <Pet rdf:about="#Max"/>
+    <Dog rdf:about="#Max"/>
+
+    <Cat rdf:about="#Luna"/>
+
+    <Shelter rdf:about="#HappyPawsShelter"/>
+
+    <Person rdf:about="#JohnDoe"/>
+
+</rdf:RDF>
