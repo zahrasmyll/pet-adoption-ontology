@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/petadoption#"
+     xml:base="http://www.example.org/petadoption"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <owl:Ontology rdf:about="http://www.example.org/petadoption"/>
+
+    <owl:Class rdf:about="#Pet"/>
+    <owl:Class rdf:about="#Dog">
+        <rdfs:subClassOf rdf:resource="#Pet"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Cat">
+        <rdfs:subClassOf rdf:resource="#Pet"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Person"/>
+    <owl:Class rdf:about="#Adopter">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Volunteer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Donor">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Shelter"/>
+    <owl:Class rdf:about="#MunicipalShelter">
+        <rdfs:subClassOf rdf:resource="#Shelter"/>
+    </owl:Class>
+    <owl:Class rdf:about="#PrivateShelter">
+        <rdfs:subClassOf rdf:resource="#Shelter"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Sanctuary">
+        <rdfs:subClassOf rdf:resource="#Shelter"/>
+    </owl:Class>
+    <owl:Class rdf:about="#FosterNetwork">
+        <rdfs:subClassOf rdf:resource="#Shelter"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#PetHealth"/>
+    <owl:Class rdf:about="#Vaccination">
+        <rdfs:subClassOf rdf:resource="#PetHealth"/>
+    </owl:Class>
+    <owl:Class rdf:about="#MedicalHistory">
+        <rdfs:subClassOf rdf:resource="#PetHealth"/>
+    </owl:Class>
+    <owl:Class rdf:about="#NeuteredStatus">
+        <rdfs:subClassOf rdf:resource="#PetHealth"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#FinancialAspect"/>
+    <owl:Class rdf:about="#AdoptionFee">
+        <rdfs:subClassOf rdf:resource="#FinancialAspect"/>
+    </owl:Class>
+    <owl:Class rdf:about="#MonthlyMaintenanceCost">
+        <rdfs:subClassOf rdf:resource="#FinancialAspect"/>
+    </owl:Class>
+    <owl:Class rdf:about="#AdopterBudget">
+        <rdfs:subClassOf rdf:resource="#FinancialAspect"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Environment"/>
+    <owl:Class rdf:about="#LivingSpace">
+        <rdfs:subClassOf rdf:resource="#Environment"/>
+    </owl:Class>
+    <owl:Class rdf:about="#ActivityLevel">
+        <rdfs:subClassOf rdf:resource="#Environment"/>
+    </owl:Class>
+    <owl:Class rdf:about="#ClimateCompatibility">
+        <rdfs:subClassOf rdf:resource="#Environment"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#PetBreed"/>
+    <owl:Class rdf:about="#CatBreed">
+        <rdfs:subClassOf rdf:resource="#PetBreed"/>
+    </owl:Class>
+    <owl:Class rdf:about="#DogBreed">
+        <rdfs:subClassOf rdf:resource="#PetBreed"/>
+    </owl:Class>
+
+
+    <owl:ObjectProperty rdf:about="#adopts">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Pet"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#livesIn">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="#Shelter"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#worksAt">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Shelter"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasHealthStatus">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="#PetHealth"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#requiresEnvironment">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="#Environment"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasMaintenanceCost">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="#MonthlyMaintenanceCost"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#canAfford">
+        <rdfs:domain rdf:resource="#Adopter"/>
+        <rdfs:range rdf:resource="#AdopterBudget"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasBreed">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="#PetBreed"/>
+    </owl:ObjectProperty>
+
+
+    <owl:DatatypeProperty rdf:about="#isVaccinated">
+        <rdfs:domain rdf:resource="#Vaccination"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#estimatedMonthlyCost">
+        <rdfs:domain rdf:resource="#MonthlyMaintenanceCost"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#requiredSpaceSize">
+        <rdfs:domain rdf:resource="#LivingSpace"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#isNeutered">
+        <rdfs:domain rdf:resource="#NeuteredStatus"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#petName">
+        <rdfs:domain rdf:resource="#Pet"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF>
