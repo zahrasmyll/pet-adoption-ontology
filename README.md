@@ -21,6 +21,3 @@ It defines relationships such as adoption and shelter assignment.
 ## Contents
 - Documentation (Specification document)
 - Ontology files (OWL/RDF)
-
-## Status
-Initial version under development.
