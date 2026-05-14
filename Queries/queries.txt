@@ -1,4 +1,4 @@
-#Query 1: List all pets and their assigned shelters (Relates to CQ1 & CQ2)
+# Query 1: List all pets and their assigned shelters (Relates to CQ1 & CQ2)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?petName ?shelterName
 WHERE {
@@ -7,7 +7,7 @@ WHERE {
        :livesIn ?shelter .
   ?shelter rdfs:label ?shelterName .
 }
-#Query 2: Identify adopters and their specific budget categories (Relates to CQ3)
+# Query 2: Identify adopters and their specific budget categories (Relates to CQ3)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?adopterName ?budgetType
 WHERE {
@@ -16,14 +16,14 @@ WHERE {
            :canAfford ?budget .
   ?budget rdf:type :AdopterBudget .
 }
-#Query 3: Retrieve all dogs using class hierarchy (Relates to CQ5)
+# Query 3: Retrieve all dogs using class hierarchy (Relates to CQ5)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?dogName
 WHERE {
   ?dog rdf:type :Dog ;
        :petName ?dogName .
 }
-#Query 4: Find pets suitable for Apartment living (Relates to CQ5)
+# Query 4: Find pets suitable for Apartment living (Relates to CQ5)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?petName
 WHERE {
@@ -32,7 +32,7 @@ WHERE {
        :requiredSpaceSize "Small" .
   ?pet :petName ?petName .
 }
-#Query 5: Match Adopters to Pets based on Budget (Relates to CQ3 & CQ8)
+# Query 5: Match Adopters to Pets based on Budget (Relates to CQ3 & CQ8)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?adopterName ?petName
 WHERE {
@@ -43,7 +43,7 @@ WHERE {
   FILTER(?amount <= 100)
   ?pet :petName ?petName .
 }
-#Query 6: Count the number of pets in each shelter (Relates to CQ1)
+# Query 6: Count the number of pets in each shelter (Relates to CQ1)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?shelterName (COUNT(?pet) AS ?petCount)
 WHERE {
@@ -51,7 +51,7 @@ WHERE {
   ?shelter rdfs:label ?shelterName .
 }
 GROUP BY ?shelterName
-#Query 7: Average maintenance cost by Pet Category (Relates to CQ8)
+# Query 7: Average maintenance cost by Pet Category (Relates to CQ8)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?type (AVG(?amount) AS ?avgCost)
 WHERE {
@@ -61,7 +61,7 @@ WHERE {
   FILTER(?type IN (:Dog, :Cat))
 }
 GROUP BY ?type
-#Query 8: Find shelters with the most vaccinated pets (Relates to CQ4 & CQ6)
+# Query 8: Find shelters with the most vaccinated pets (Relates to CQ4 & CQ6)
 PREFIX : <http://www.example.org/petadoption#>
 SELECT ?shelterName (COUNT(?pet) AS ?vaccinatedCount)
 WHERE {
