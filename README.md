@@ -27,18 +27,21 @@ The main goal of this project is to bridge the semantic gap between potential pe
 
 ## 📂 Repository Structure
 ```text
-├── docs/                      # WIDOCO Generated HTML & WebVOWL Deployment
-│   ├── index-en.html          # Main documentation portal (Contains SPARQL Library)
-│   ├── webvowl/               # Interactive ontology visualization engine
-│   ├── ontology.owl           # Serialized TBox & ABox data
-│   └── ...
-├── pet_adoption_v2.owl        # Core OWL Ontology File (Protégé Compatible)
 ├── Queries/
-│   └── queries.txt            # Complete library of SPARQL queries used in evaluation
-├── Documentation/
-│   ├── Project_Report.pdf     # Final Academic Project Report
-│   └── specification_v2.docx  # Full Ontology Design Specification
-└── README.md                  # Project landing page and deployment guide
+│   └── queries.txt            # Library of raw SPARQL queries used in evaluation
+├── docs/                      # Core Documentation & WIDOCO Web Deployment
+│   ├── index-en.html          # Main web documentation portal (Contains SPARQL Library)
+│   ├── webvowl/               # Interactive ontology visualization engine
+│   ├── ProjectReport.docx     # Final Academic Project Report Document
+│   ├── specification.docx     # Ontology Design Specification Document (v1)
+│   ├── specification_v2.docx  # Final Ontology Design Specification Document (v2)
+│   └── ...                    # WIDOCO support files and resources
+├── ontology
+|   ├── ontology.owl
+|   ├── ontology_v2.owl        # Core OWL Ontology File (Protégé Compatible)
+├── README.md                  # Project landing page and deployment guide
+
+└── pet_adoption_shapes.ttl    # SHACL Constraints and Validation Shapes File              
 ```
 
 ---
