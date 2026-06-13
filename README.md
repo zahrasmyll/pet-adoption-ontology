@@ -39,6 +39,7 @@ The main goal of this project is to bridge the semantic gap between potential pe
 │   ├── Project_Report.pdf     # Final Academic Project Report
 │   └── specification_v2.docx  # Full Ontology Design Specification
 └── README.md                  # Project landing page and deployment guide
+```
 
 ---
 
