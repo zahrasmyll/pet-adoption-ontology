@@ -1,3 +1,118 @@
-<h2 id="desc" class="list">Pet Adoption Knowledge Graph: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="desc" class="list">Pet Adoption Ontology: SPARQL Query Library <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>To evaluate the competency and practical utility of the Pet Adoption Ontology, a comprehensive set of SPARQL queries has been designed. These queries address specific Competency Questions (CQs) related to shelter management, health status tracking, budgeting constraints, and animal classification.</p>
 
-<span class="markdown">An ontology designed to facilitate semantic matching between potential adopters and shelter pets based on health, budget, and living space constraints.</span>
+<hr>
+
+<div class="faq">
+    <h3>Query 1: List all pets and their assigned shelters (Relates to CQ1 & CQ2)</h3>
+    <p>Retrieves all registered pets alongside the specific shelter where they are currently located.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?petName ?shelterName
+WHERE {
+  ?pet rdf:type :Pet ;
+       :petName ?petName ;
+       :livesIn ?shelter .
+  ?shelter rdfs:label ?shelterName .
+}</pre>
+</div>
+
+<div class="faq">
+    <h3>Query 2: Identify adopters and their specific budget categories (Relates to CQ3)</h3>
+    <p>Extracts the profile names of prospective adopters and maps them directly to their defined financial budget limits.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?adopterName ?budgetType
+WHERE {
+  ?adopter rdf:type :Adopter ;
+           :petName ?adopterName ;
+           :canAfford ?budget .
+  ?budget rdf:type :AdopterBudget .
+}</pre>
+</div>
+
+<div class="faq">
+    <h3>Query 3: Retrieve all dogs using class hierarchy (Relates to CQ5)</h3>
+    <p>Leverages TBox taxonomic reasoning to successfully list all instances explicitly declared as or inferred to be Dogs.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?dogName
+WHERE {
+  ?dog rdf:type :Dog ;
+       :petName ?dogName .
+}</pre>
+</div>
+
+<div class="faq">
+    <h3>Query 4: Find pets suitable for Apartment living (Relates to CQ5)</h3>
+    <p>Filters animal profiles based on their spatial environmental requirements, isolating pets suitable for "Small" living spaces.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?petName
+WHERE {
+  ?pet :requiresEnvironment ?env .
+  ?env rdf:type :LivingSpace ;
+       :requiredSpaceSize "Small" .
+  ?pet :petName ?petName .
+}</pre>
+</div>
+
+<div class="faq">
+    <h3>Query 5: Match Adopters to Pets based on Budget (Relates to CQ3 & CQ8)</h3>
+    <p>Performs semantic matching between low-budget adopters and pets whose estimated monthly maintenance costs do not exceed $100.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?adopterName ?petName
+WHERE {
+  ?adopter :canAfford :LowBudget ;
+           :petName ?adopterName .
+  ?pet :hasMaintenanceCost ?cost .
+  ?cost :estimatedMonthlyCost ?amount .
+  FILTER(?amount &lt;= 100)
+  ?pet :petName ?petName .
+}</pre>
+</div>
+
+<div class="faq">
+    <h3>Query 6: Count the number of pets in each shelter (Relates to CQ1)</h3>
+    <p>Uses SPARQL aggregation functions to dynamically calculate the overall animal population density across individual animal shelters.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?shelterName (COUNT(?pet) AS ?petCount)
+WHERE {
+  ?pet :livesIn ?shelter .
+  ?shelter rdfs:label ?shelterName .
+}
+GROUP BY ?shelterName</pre>
+</div>
+
+<div class="faq">
+    <h3>Query 7: Average maintenance cost by Pet Category (Relates to CQ8)</h3>
+    <p>Calculates and group-compares the mathematical mean of monthly care expenses specifically for the Dog and Cat sub-classes.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?type (AVG(?amount) AS ?avgCost)
+WHERE {
+  ?pet rdf:type ?type .
+  ?pet :hasMaintenanceCost ?cost .
+  ?cost :estimatedMonthlyCost ?amount .
+  FILTER(?type IN (:Dog, :Cat))
+}
+GROUP BY ?type</pre>
+</div>
+
+<div class="faq">
+    <h3>Query 8: Find shelters with the most vaccinated pets (Relates to CQ4 & CQ6)</h3>
+    <p>Tracks operational medical statuses by listing shelters sorted by their volume of fully vaccinated animal residents.</p>
+    <pre>
+PREFIX : &lt;http://www.example.org/petadoption#&gt;
+SELECT ?shelterName (COUNT(?pet) AS ?vaccinatedCount)
+WHERE {
+  ?pet :livesIn ?shelter ;
+       :hasHealthStatus ?health .
+  ?health :isVaccinated "true"^^xsd:boolean .
+  ?shelter rdfs:label ?shelterName .
+}
+GROUP BY ?shelterName
+ORDER BY DESC(?vaccinatedCount)</pre>
+</div>
