@@ -1,0 +1,195 @@
+<http://www.example.org/petadoption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/petadoption#adopts
+<http://www.example.org/petadoption#adopts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#adopts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Person> .
+<http://www.example.org/petadoption#adopts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#Pet> .
+# 
+# http://www.example.org/petadoption#canAfford
+<http://www.example.org/petadoption#canAfford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#canAfford> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Adopter> .
+<http://www.example.org/petadoption#canAfford> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#AdopterBudget> .
+# 
+# http://www.example.org/petadoption#hasBreed
+<http://www.example.org/petadoption#hasBreed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#hasBreed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Pet> .
+<http://www.example.org/petadoption#hasBreed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#PetBreed> .
+# 
+# http://www.example.org/petadoption#hasHealthStatus
+<http://www.example.org/petadoption#hasHealthStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#hasHealthStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Pet> .
+<http://www.example.org/petadoption#hasHealthStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#PetHealth> .
+# 
+# http://www.example.org/petadoption#hasMaintenanceCost
+<http://www.example.org/petadoption#hasMaintenanceCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#hasMaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Pet> .
+<http://www.example.org/petadoption#hasMaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#MonthlyMaintenanceCost> .
+# 
+# http://www.example.org/petadoption#livesIn
+<http://www.example.org/petadoption#livesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#livesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Pet> .
+<http://www.example.org/petadoption#livesIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#Shelter> .
+# 
+# http://www.example.org/petadoption#requiresEnvironment
+<http://www.example.org/petadoption#requiresEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#requiresEnvironment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Pet> .
+<http://www.example.org/petadoption#requiresEnvironment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#Environment> .
+# 
+# http://www.example.org/petadoption#worksAt
+<http://www.example.org/petadoption#worksAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.example.org/petadoption#worksAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Person> .
+<http://www.example.org/petadoption#worksAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/petadoption#Shelter> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/petadoption#estimatedMonthlyCost
+<http://www.example.org/petadoption#estimatedMonthlyCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/petadoption#estimatedMonthlyCost> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#MonthlyMaintenanceCost> .
+<http://www.example.org/petadoption#estimatedMonthlyCost> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+# 
+# http://www.example.org/petadoption#isNeutered
+<http://www.example.org/petadoption#isNeutered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/petadoption#isNeutered> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#NeuteredStatus> .
+<http://www.example.org/petadoption#isNeutered> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.example.org/petadoption#isVaccinated
+<http://www.example.org/petadoption#isVaccinated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/petadoption#isVaccinated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Vaccination> .
+<http://www.example.org/petadoption#isVaccinated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.example.org/petadoption#petName
+<http://www.example.org/petadoption#petName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/petadoption#petName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#Pet> .
+<http://www.example.org/petadoption#petName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.example.org/petadoption#requiredSpaceSize
+<http://www.example.org/petadoption#requiredSpaceSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/petadoption#requiredSpaceSize> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/petadoption#LivingSpace> .
+<http://www.example.org/petadoption#requiredSpaceSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/petadoption#ActivityLevel
+<http://www.example.org/petadoption#ActivityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#ActivityLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Environment> .
+# 
+# http://www.example.org/petadoption#Adopter
+<http://www.example.org/petadoption#Adopter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#Adopter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Person> .
+# 
+# http://www.example.org/petadoption#AdopterBudget
+<http://www.example.org/petadoption#AdopterBudget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#AdopterBudget> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#FinancialAspect> .
+# 
+# http://www.example.org/petadoption#AdoptionFee
+<http://www.example.org/petadoption#AdoptionFee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#AdoptionFee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#FinancialAspect> .
+# 
+# http://www.example.org/petadoption#Cat
+<http://www.example.org/petadoption#Cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#Cat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Pet> .
+# 
+# http://www.example.org/petadoption#CatBreed
+<http://www.example.org/petadoption#CatBreed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#CatBreed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#PetBreed> .
+# 
+# http://www.example.org/petadoption#ClimateCompatibility
+<http://www.example.org/petadoption#ClimateCompatibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#ClimateCompatibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Environment> .
+# 
+# http://www.example.org/petadoption#Dog
+<http://www.example.org/petadoption#Dog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#Dog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Pet> .
+# 
+# http://www.example.org/petadoption#DogBreed
+<http://www.example.org/petadoption#DogBreed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#DogBreed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#PetBreed> .
+# 
+# http://www.example.org/petadoption#Donor
+<http://www.example.org/petadoption#Donor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#Donor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Person> .
+# 
+# http://www.example.org/petadoption#Environment
+<http://www.example.org/petadoption#Environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.example.org/petadoption#FinancialAspect
+<http://www.example.org/petadoption#FinancialAspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.example.org/petadoption#FosterNetwork
+<http://www.example.org/petadoption#FosterNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#FosterNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Shelter> .
+# 
+# http://www.example.org/petadoption#LivingSpace
+<http://www.example.org/petadoption#LivingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#LivingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Environment> .
+# 
+# http://www.example.org/petadoption#MedicalHistory
+<http://www.example.org/petadoption#MedicalHistory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#MedicalHistory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#PetHealth> .
+# 
+# http://www.example.org/petadoption#MonthlyMaintenanceCost
+<http://www.example.org/petadoption#MonthlyMaintenanceCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#MonthlyMaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#FinancialAspect> .
+# 
+# http://www.example.org/petadoption#MunicipalShelter
+<http://www.example.org/petadoption#MunicipalShelter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#MunicipalShelter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Shelter> .
+# 
+# http://www.example.org/petadoption#NeuteredStatus
+<http://www.example.org/petadoption#NeuteredStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#NeuteredStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#PetHealth> .
+# 
+# http://www.example.org/petadoption#Person
+<http://www.example.org/petadoption#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.example.org/petadoption#Pet
+<http://www.example.org/petadoption#Pet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.example.org/petadoption#PetBreed
+<http://www.example.org/petadoption#PetBreed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.example.org/petadoption#PetHealth
+<http://www.example.org/petadoption#PetHealth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.example.org/petadoption#PrivateShelter
+<http://www.example.org/petadoption#PrivateShelter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#PrivateShelter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Shelter> .
+# 
+# http://www.example.org/petadoption#Sanctuary
+<http://www.example.org/petadoption#Sanctuary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#Sanctuary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Shelter> .
+# 
+# http://www.example.org/petadoption#Shelter
+<http://www.example.org/petadoption#Shelter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.example.org/petadoption#Vaccination
+<http://www.example.org/petadoption#Vaccination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#Vaccination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#PetHealth> .
+# 
+# http://www.example.org/petadoption#Volunteer
+<http://www.example.org/petadoption#Volunteer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/petadoption#Volunteer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/petadoption#Person> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

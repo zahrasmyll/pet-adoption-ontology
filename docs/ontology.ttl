@@ -1,0 +1,229 @@
+@prefix : <http://www.example.org/petadoption#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.example.org/petadoption#> .
+
+<http://www.example.org/petadoption> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/petadoption#adopts
+:adopts rdf:type owl:ObjectProperty ;
+        rdfs:domain :Person ;
+        rdfs:range :Pet .
+
+
+###  http://www.example.org/petadoption#canAfford
+:canAfford rdf:type owl:ObjectProperty ;
+           rdfs:domain :Adopter ;
+           rdfs:range :AdopterBudget .
+
+
+###  http://www.example.org/petadoption#hasBreed
+:hasBreed rdf:type owl:ObjectProperty ;
+          rdfs:domain :Pet ;
+          rdfs:range :PetBreed .
+
+
+###  http://www.example.org/petadoption#hasHealthStatus
+:hasHealthStatus rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Pet ;
+                 rdfs:range :PetHealth .
+
+
+###  http://www.example.org/petadoption#hasMaintenanceCost
+:hasMaintenanceCost rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Pet ;
+                    rdfs:range :MonthlyMaintenanceCost .
+
+
+###  http://www.example.org/petadoption#livesIn
+:livesIn rdf:type owl:ObjectProperty ;
+         rdfs:domain :Pet ;
+         rdfs:range :Shelter .
+
+
+###  http://www.example.org/petadoption#requiresEnvironment
+:requiresEnvironment rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Pet ;
+                     rdfs:range :Environment .
+
+
+###  http://www.example.org/petadoption#worksAt
+:worksAt rdf:type owl:ObjectProperty ;
+         rdfs:domain :Person ;
+         rdfs:range :Shelter .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.org/petadoption#estimatedMonthlyCost
+:estimatedMonthlyCost rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :MonthlyMaintenanceCost ;
+                      rdfs:range xsd:float .
+
+
+###  http://www.example.org/petadoption#isNeutered
+:isNeutered rdf:type owl:DatatypeProperty ;
+            rdfs:domain :NeuteredStatus ;
+            rdfs:range xsd:boolean .
+
+
+###  http://www.example.org/petadoption#isVaccinated
+:isVaccinated rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Vaccination ;
+              rdfs:range xsd:boolean .
+
+
+###  http://www.example.org/petadoption#petName
+:petName rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Pet ;
+         rdfs:range xsd:string .
+
+
+###  http://www.example.org/petadoption#requiredSpaceSize
+:requiredSpaceSize rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :LivingSpace ;
+                   rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/petadoption#ActivityLevel
+:ActivityLevel rdf:type owl:Class ;
+               rdfs:subClassOf :Environment .
+
+
+###  http://www.example.org/petadoption#Adopter
+:Adopter rdf:type owl:Class ;
+         rdfs:subClassOf :Person .
+
+
+###  http://www.example.org/petadoption#AdopterBudget
+:AdopterBudget rdf:type owl:Class ;
+               rdfs:subClassOf :FinancialAspect .
+
+
+###  http://www.example.org/petadoption#AdoptionFee
+:AdoptionFee rdf:type owl:Class ;
+             rdfs:subClassOf :FinancialAspect .
+
+
+###  http://www.example.org/petadoption#Cat
+:Cat rdf:type owl:Class ;
+     rdfs:subClassOf :Pet .
+
+
+###  http://www.example.org/petadoption#CatBreed
+:CatBreed rdf:type owl:Class ;
+          rdfs:subClassOf :PetBreed .
+
+
+###  http://www.example.org/petadoption#ClimateCompatibility
+:ClimateCompatibility rdf:type owl:Class ;
+                      rdfs:subClassOf :Environment .
+
+
+###  http://www.example.org/petadoption#Dog
+:Dog rdf:type owl:Class ;
+     rdfs:subClassOf :Pet .
+
+
+###  http://www.example.org/petadoption#DogBreed
+:DogBreed rdf:type owl:Class ;
+          rdfs:subClassOf :PetBreed .
+
+
+###  http://www.example.org/petadoption#Donor
+:Donor rdf:type owl:Class ;
+       rdfs:subClassOf :Person .
+
+
+###  http://www.example.org/petadoption#Environment
+:Environment rdf:type owl:Class .
+
+
+###  http://www.example.org/petadoption#FinancialAspect
+:FinancialAspect rdf:type owl:Class .
+
+
+###  http://www.example.org/petadoption#FosterNetwork
+:FosterNetwork rdf:type owl:Class ;
+               rdfs:subClassOf :Shelter .
+
+
+###  http://www.example.org/petadoption#LivingSpace
+:LivingSpace rdf:type owl:Class ;
+             rdfs:subClassOf :Environment .
+
+
+###  http://www.example.org/petadoption#MedicalHistory
+:MedicalHistory rdf:type owl:Class ;
+                rdfs:subClassOf :PetHealth .
+
+
+###  http://www.example.org/petadoption#MonthlyMaintenanceCost
+:MonthlyMaintenanceCost rdf:type owl:Class ;
+                        rdfs:subClassOf :FinancialAspect .
+
+
+###  http://www.example.org/petadoption#MunicipalShelter
+:MunicipalShelter rdf:type owl:Class ;
+                  rdfs:subClassOf :Shelter .
+
+
+###  http://www.example.org/petadoption#NeuteredStatus
+:NeuteredStatus rdf:type owl:Class ;
+                rdfs:subClassOf :PetHealth .
+
+
+###  http://www.example.org/petadoption#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.example.org/petadoption#Pet
+:Pet rdf:type owl:Class .
+
+
+###  http://www.example.org/petadoption#PetBreed
+:PetBreed rdf:type owl:Class .
+
+
+###  http://www.example.org/petadoption#PetHealth
+:PetHealth rdf:type owl:Class .
+
+
+###  http://www.example.org/petadoption#PrivateShelter
+:PrivateShelter rdf:type owl:Class ;
+                rdfs:subClassOf :Shelter .
+
+
+###  http://www.example.org/petadoption#Sanctuary
+:Sanctuary rdf:type owl:Class ;
+           rdfs:subClassOf :Shelter .
+
+
+###  http://www.example.org/petadoption#Shelter
+:Shelter rdf:type owl:Class .
+
+
+###  http://www.example.org/petadoption#Vaccination
+:Vaccination rdf:type owl:Class ;
+             rdfs:subClassOf :PetHealth .
+
+
+###  http://www.example.org/petadoption#Volunteer
+:Volunteer rdf:type owl:Class ;
+           rdfs:subClassOf :Person .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

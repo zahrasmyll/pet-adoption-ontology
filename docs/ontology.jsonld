@@ -1,0 +1,262 @@
+[ {
+  "@id" : "http://www.example.org/petadoption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#ActivityLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Environment"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Adopter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Person"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#AdopterBudget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#FinancialAspect"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#AdoptionFee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#FinancialAspect"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Cat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#CatBreed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#PetBreed"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#ClimateCompatibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Environment"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Dog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#DogBreed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#PetBreed"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Donor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Person"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Environment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#FinancialAspect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#FosterNetwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Shelter"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#LivingSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Environment"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#MedicalHistory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#PetHealth"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#MonthlyMaintenanceCost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#FinancialAspect"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#MunicipalShelter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Shelter"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#NeuteredStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#PetHealth"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Pet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#PetBreed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#PetHealth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#PrivateShelter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Shelter"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Sanctuary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Shelter"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Shelter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Vaccination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#PetHealth"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#Volunteer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.example.org/petadoption#Person"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#adopts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#canAfford",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Adopter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#AdopterBudget"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#estimatedMonthlyCost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#MonthlyMaintenanceCost"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#hasBreed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#PetBreed"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#hasHealthStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#PetHealth"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#hasMaintenanceCost",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#MonthlyMaintenanceCost"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#isNeutered",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#NeuteredStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#isVaccinated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Vaccination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#livesIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#Shelter"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#petName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#requiredSpaceSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#LivingSpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#requiresEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Pet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#Environment"
+  } ]
+}, {
+  "@id" : "http://www.example.org/petadoption#worksAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/petadoption#Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.example.org/petadoption#Shelter"
+  } ]
+} ]

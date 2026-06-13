@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/petadoption#"
+     xml:base="http://www.example.org/petadoption"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.org/petadoption"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.example.org/petadoption#adopts -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#adopts">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#Pet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#canAfford -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#canAfford">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Adopter"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#AdopterBudget"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#hasBreed -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#hasBreed">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Pet"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#PetBreed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#hasHealthStatus -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#hasHealthStatus">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Pet"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#PetHealth"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#hasMaintenanceCost -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#hasMaintenanceCost">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Pet"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#MonthlyMaintenanceCost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#livesIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#livesIn">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Pet"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#Shelter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#requiresEnvironment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#requiresEnvironment">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Pet"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#Environment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#worksAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/petadoption#worksAt">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/petadoption#Shelter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.example.org/petadoption#estimatedMonthlyCost -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/petadoption#estimatedMonthlyCost">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#MonthlyMaintenanceCost"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#isNeutered -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/petadoption#isNeutered">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#NeuteredStatus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#isVaccinated -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/petadoption#isVaccinated">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Vaccination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#petName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/petadoption#petName">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#Pet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/petadoption#requiredSpaceSize -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/petadoption#requiredSpaceSize">
+        <rdfs:domain rdf:resource="http://www.example.org/petadoption#LivingSpace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.example.org/petadoption#ActivityLevel -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#ActivityLevel">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Adopter -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Adopter">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#AdopterBudget -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#AdopterBudget">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#FinancialAspect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#AdoptionFee -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#AdoptionFee">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#FinancialAspect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Cat -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Cat">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#CatBreed -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#CatBreed">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#PetBreed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#ClimateCompatibility -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#ClimateCompatibility">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Dog -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Dog">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#DogBreed -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#DogBreed">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#PetBreed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Donor -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Donor">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Environment -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Environment"/>
+    
+
+
+    <!-- http://www.example.org/petadoption#FinancialAspect -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#FinancialAspect"/>
+    
+
+
+    <!-- http://www.example.org/petadoption#FosterNetwork -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#FosterNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Shelter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#LivingSpace -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#LivingSpace">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#MedicalHistory -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#MedicalHistory">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#PetHealth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#MonthlyMaintenanceCost -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#MonthlyMaintenanceCost">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#FinancialAspect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#MunicipalShelter -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#MunicipalShelter">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Shelter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#NeuteredStatus -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#NeuteredStatus">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#PetHealth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Person -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Person"/>
+    
+
+
+    <!-- http://www.example.org/petadoption#Pet -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Pet"/>
+    
+
+
+    <!-- http://www.example.org/petadoption#PetBreed -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#PetBreed"/>
+    
+
+
+    <!-- http://www.example.org/petadoption#PetHealth -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#PetHealth"/>
+    
+
+
+    <!-- http://www.example.org/petadoption#PrivateShelter -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#PrivateShelter">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Shelter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Sanctuary -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Sanctuary">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Shelter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Shelter -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Shelter"/>
+    
+
+
+    <!-- http://www.example.org/petadoption#Vaccination -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Vaccination">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#PetHealth"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/petadoption#Volunteer -->
+
+
+    <owl:Class rdf:about="http://www.example.org/petadoption#Volunteer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/petadoption#Person"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
