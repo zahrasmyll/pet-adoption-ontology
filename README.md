@@ -44,7 +44,7 @@ The main goal of this project is to bridge the semantic gap between potential pe
 ---
 
 ## 🛠️ Installation, Setup & Usage Instructions
-1. Exploring the Knowledge Graph Locally
+**1. Exploring the Knowledge Graph Locally**
 To inspect, modify, or extend the core ontology file:
 
 Download and install Protégé (v5.6.0 or higher).
@@ -55,12 +55,12 @@ Open Protégé, select File -> Open... and load the pet_adoption_v2.owl file.
 
 Navigate to the Reasoner menu and select HermiT. Click Start Reasoner to execute logical inference and check consistency.
 
-2. Testing & Viewing SPARQL Queries
+**2. Testing & Viewing SPARQL Queries**
 Fast Track (Recommended): You can view all major SPARQL queries alongside their structural descriptions directly on our WIDOCO Live Documentation Page (scroll down to the Pet Adoption Ontology: SPARQL Query Library section). No installation required!
 
 Manual Testing: Alternatively, you can copy the raw queries from the Queries/queries.txt file and execute them inside Protégé's SPARQL Query tab.
 
-3. Validating Constraints with SHACL
+**3. Validating Constraints with SHACL**
 Load the ontology file into any SHACL-compliant validator engine or use the Protégé SHACL plugin.
 
 Run the validation shapes stored in the project files to observe data compliance and constraints testing.
