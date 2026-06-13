@@ -1,0 +1,27 @@
+@prefix : <http://www.example.org/petadoption#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# SHACL Shape: Validate Pet Constraints
+:PetShape
+    a sh:NodeShape ;
+    sh:targetClass :Pet ;
+    sh:property [
+        sh:path :petName ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Validation Error: A pet must have exactly one registered name." ;
+    ] .
+
+# SHACL Shape: Validate Monthly Maintenance Cost
+:CostShape
+    a sh:NodeShape ;
+    sh:targetClass :MonthlyMaintenanceCost ;
+    sh:property [
+        sh:path :estimatedMonthlyCost ;
+        sh:minInclusive 0.0 ;
+        sh:datatype xsd:float ;
+        sh:message "Validation Error: The estimated monthly maintenance cost cannot be a negative value." ;
+    ] .
