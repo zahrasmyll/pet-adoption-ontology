@@ -40,7 +40,6 @@ The main goal of this project is to bridge the semantic gap between potential pe
 |   ├── ontology.owl
 |   ├── ontology_v2.owl        # Core OWL Ontology File (Protégé Compatible)
 ├── README.md                  # Project landing page and deployment guide
-
 └── pet_adoption_shapes.ttl    # SHACL Constraints and Validation Shapes File              
 ```
 
